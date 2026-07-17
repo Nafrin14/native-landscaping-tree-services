@@ -31,20 +31,21 @@ function AboutPreview() {
           </div>
 
           {/* Experience Badge */}
-          <div className="absolute -bottom-7 left-5 rounded-2xl border border-white/20 bg-[#08783e] px-7 py-5 text-white shadow-xl sm:left-10">
+          <div className="absolute -bottom-7 left-5 rounded-2xl border border-white/20 bg-[#056b36] px-7 py-5 text-white shadow-xl sm:left-10">
             <p className="text-4xl font-extrabold">10+</p>
+
             <p className="mt-1 text-sm font-bold uppercase tracking-wide">
               Years Experience
             </p>
           </div>
 
           {/* Decorative Shape */}
-          <div className="absolute -right-8 -top-8 -z-10 h-40 w-40 rounded-full bg-green-100"></div>
+          <div className="absolute -right-8 -top-8 -z-10 h-40 w-40 rounded-full bg-green-100" />
         </div>
 
         {/* Content Side */}
         <div className="pt-8 lg:pt-0">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-[#078c45]">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-[#034f28]">
             About Our Company
           </p>
 
@@ -52,16 +53,16 @@ function AboutPreview() {
             Trusted Landscaping and Tree Care Professionals
           </h2>
 
-          <div className="mt-5 h-1 w-20 rounded-full bg-[#08b95f]"></div>
+          <div className="mt-5 h-1 w-20 rounded-full bg-[#056b36]" />
 
-          <p className="mt-7 text-lg leading-8 text-gray-600">
-            Native Landscaping & Tree Services provides dependable outdoor
+          <p className="mt-7 text-lg leading-8 text-gray-700">
+            Native Landscaping &amp; Tree Services provides dependable outdoor
             property care for homeowners and businesses throughout Syracuse
             and surrounding communities.
           </p>
 
-          <p className="mt-4 text-lg leading-8 text-gray-600">
-            From landscaping and routine maintenance to tree trimming, removal
+          <p className="mt-4 text-lg leading-8 text-gray-700">
+            From landscaping and routine maintenance to tree trimming, removal,
             and emergency cleanup, our experienced team handles every project
             safely and professionally.
           </p>
@@ -73,19 +74,26 @@ function AboutPreview() {
                 key={item}
                 className="flex items-center gap-3 rounded-xl bg-[#f4f9f5] px-4 py-3"
               >
-                <FaCheckCircle className="shrink-0 text-xl text-[#078c45]" />
+                <FaCheckCircle
+                  aria-hidden="true"
+                  className="shrink-0 text-xl text-[#056b36]"
+                />
 
-                <span className="font-bold text-gray-700">{item}</span>
+                <span className="font-bold text-gray-800">
+                  {item}
+                </span>
               </div>
             ))}
           </div>
 
           <Link
             to="/about"
-            className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#078c45] px-8 py-4 font-bold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#056b36] hover:shadow-xl"
+            aria-label="Learn more about Native Landscaping and Tree Services"
+            className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#056b36] px-8 py-4 font-bold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#034f28] hover:shadow-xl"
           >
             Learn More About Us
-            <FaArrowRight />
+
+            <FaArrowRight aria-hidden="true" />
           </Link>
         </div>
       </div>
