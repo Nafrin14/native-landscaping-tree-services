@@ -77,8 +77,7 @@ function Navbar() {
                 Native
               </h1>
 
-              <p className="mt-1 truncate text-[7px] font-extrabold uppercase tracking-[0.25em] text-[#078c45] sm:text-[8px]">
-                Landscaping &amp; Tree Services
+             <p className="mt-1 truncate text-[7px] font-extrabold uppercase tracking-[0.25em] text-[#056b36] sm:text-[8px]">
               </p>
             </div>
           </Link>
@@ -89,20 +88,20 @@ function Navbar() {
               <NavLink
                 key={link.name}
                 to={link.path}
-                className={({ isActive }) =>
-                  `relative py-2 text-sm font-bold transition-colors ${
-                    isActive
-                      ? "text-[#078c45]"
-                      : "text-gray-700 hover:text-[#078c45]"
-                  }`
-                }
+               className={({ isActive }) =>
+  `relative py-2 text-sm font-bold transition-colors ${
+    isActive
+      ? "text-[#056b36]"
+      : "text-gray-700 hover:text-[#056b36]"
+  }`
+}
               >
                 {({ isActive }) => (
                   <>
                     {link.name}
 
                     <span
-                      className={`absolute bottom-0 left-0 h-0.5 bg-[#078c45] transition-all duration-300 ${
+                      className={`absolute bottom-0 left-0 h-0.5 bg-[#056b36] transition-all duration-300 ${
                         isActive ? "w-full" : "w-0"
                       }`}
                     />
@@ -115,7 +114,7 @@ function Navbar() {
           {/* Desktop Call Button */}
           <a
             href="tel:5186718733"
-            className="hidden items-center gap-2 rounded-full bg-[#078c45] px-5 py-3 text-sm font-extrabold text-white transition hover:bg-[#056f37] lg:flex"
+            className="hidden items-center gap-2 rounded-full bg-[#056b36] px-5 py-3 text-sm font-extrabold text-white transition hover:bg-[#056f37] lg:flex"
           >
             <FaPhoneAlt />
             (518) 671-8733
@@ -228,10 +227,10 @@ function Navbar() {
 
         {/* Bottom CTA Area */}
         <div className="border-t border-gray-100 bg-white p-5">
-          <a
-            href="tel:5186718733"
-            className="flex w-full items-center justify-center gap-3 rounded-full bg-[#0c4a2a] px-5 py-4 font-extrabold text-white shadow-lg transition hover:bg-[#078c45]"
-          >
+         <a
+  href="tel:+15186718733"
+  className="hidden items-center gap-2 rounded-full bg-[#056b36] px-5 py-3 text-sm font-extrabold text-white transition hover:bg-[#034f28] lg:flex"
+>
             <FaPhoneAlt />
             Call (518) 671-8733
           </a>

@@ -51,23 +51,21 @@ function Services() {
   return (
     <section className="bg-[#f4f8f5] py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
         {/* Heading */}
         <div className="mx-auto max-w-5xl text-center">
-
-          <span className="inline-block rounded-full bg-green-100 px-5 py-2 text-sm font-bold uppercase tracking-[0.25em] text-[#078c45]">
+          <span className="inline-block rounded-full bg-green-100 px-5 py-2 text-sm font-bold uppercase tracking-[0.25em] text-[#056b36]">
             Our Services
           </span>
 
           <h2 className="mt-6 text-4xl font-extrabold leading-tight text-[#10351f] sm:text-3xl lg:text-4xl xl:text-5xl">
             Complete Landscaping
             <br />
-            <span className="text-[#078c45]">
+            <span className="text-[#056b36]">
               &amp; Tree Care Services
             </span>
           </h2>
 
-          <div className="mx-auto mt-6 h-1.5 w-24 rounded-full bg-[#08b95f]"></div>
+          <div className="mx-auto mt-6 h-1.5 w-24 rounded-full bg-[#056b36]" />
 
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-600 lg:text-xl">
             From tree removal and trimming to landscaping, stump grinding,
@@ -87,22 +85,21 @@ function Services() {
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} service`}
                   width="700"
                   height="500"
                   loading="lazy"
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                <span className="absolute bottom-5 left-5 rounded-full bg-[#078c45] px-5 py-2 text-sm font-semibold text-white shadow-lg">
+                <span className="absolute bottom-5 left-5 rounded-full bg-[#056b36] px-5 py-2 text-sm font-semibold text-white shadow-lg">
                   Professional Service
                 </span>
               </div>
 
               <div className="p-7">
-
                 <h3 className="text-2xl font-bold text-[#10351f]">
                   {service.title}
                 </h3>
@@ -111,37 +108,36 @@ function Services() {
                   {service.description}
                 </p>
 
-               <Link
-  to="/services"
-  aria-label={`Learn more about ${service.title}`}
-  title={`Learn more about ${service.title}`}
-  className="mt-6 inline-flex items-center gap-2 font-semibold text-[#078c45] transition hover:text-[#055f31]"
->
-  Learn More About {service.title}
-  <FaArrowRight
-    aria-hidden="true"
-    className="transition group-hover:translate-x-1"
-  />
-</Link>
+                <Link
+                  to="/services"
+                  aria-label={`Learn more about ${service.title}`}
+                  title={`Learn more about ${service.title}`}
+                  className="mt-6 inline-flex items-center gap-2 font-semibold text-[#056b36] transition hover:text-[#034f28]"
+                >
+                  Learn More About {service.title}
 
+                  <FaArrowRight
+                    aria-hidden="true"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </Link>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Button */}
+        {/* Main Button */}
         <div className="mt-16 text-center">
-         <Link
-  to="/services"
-  aria-label="View all landscaping and tree care services"
-  title="View all landscaping and tree care services"
-  className="inline-flex items-center gap-3 rounded-full bg-[#078c45] px-10 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#056b36]"
->
-  View All Services
-  <FaArrowRight aria-hidden="true" />
-</Link>
+          <Link
+            to="/services"
+            aria-label="View all landscaping and tree care services"
+            title="View all landscaping and tree care services"
+            className="inline-flex items-center gap-3 rounded-full bg-[#056b36] px-10 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#034f28]"
+          >
+            View All Services
+            <FaArrowRight aria-hidden="true" />
+          </Link>
         </div>
-
       </div>
     </section>
   );
