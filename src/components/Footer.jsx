@@ -1,7 +1,4 @@
 import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
@@ -43,12 +40,17 @@ function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:pr-6">
-            <Link to="/" className="inline-flex items-center gap-4">
+            <Link
+              to="/"
+              aria-label="Go to Native Landscaping and Tree Services home page"
+              className="inline-flex items-center gap-4"
+            >
               <img
                 src={logo}
                 alt="Native Landscaping and Tree Services logo"
                 width="72"
                 height="72"
+                loading="lazy"
                 className="h-16 w-16 object-contain"
               />
 
@@ -67,33 +69,6 @@ function Footer() {
               Professional landscaping and tree care services focused on
               safety, quality workmanship, and customer satisfaction.
             </p>
-
-            {/* Social Icons */}
-            <div className="mt-7 flex gap-3">
-              <a
-                href="#facebook"
-                aria-label="Facebook"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-green-400 hover:bg-[#078c45]"
-              >
-                <FaFacebookF />
-              </a>
-
-              <a
-                href="#instagram"
-                aria-label="Instagram"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-green-400 hover:bg-[#078c45]"
-              >
-                <FaInstagram />
-              </a>
-
-              <a
-                href="#linkedin"
-                aria-label="LinkedIn"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-green-400 hover:bg-[#078c45]"
-              >
-                <FaLinkedinIn />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -107,9 +82,14 @@ function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.path}
+                    aria-label={`Go to ${link.name} page`}
                     className="group inline-flex items-center gap-3 text-green-100/80 transition-colors duration-300 hover:text-white"
                   >
-                    <FaLeaf className="text-xs text-[#18a957] transition-transform duration-300 group-hover:rotate-12" />
+                    <FaLeaf
+                      aria-hidden="true"
+                      className="text-xs text-[#18a957] transition-transform duration-300 group-hover:rotate-12"
+                    />
+
                     {link.name}
                   </Link>
                 </li>
@@ -128,9 +108,15 @@ function Footer() {
                 <li key={service}>
                   <Link
                     to="/services"
+                    aria-label={`Learn more about ${service}`}
+                    title={`Learn more about ${service}`}
                     className="group inline-flex items-center gap-3 text-green-100/80 transition-colors duration-300 hover:text-white"
                   >
-                    <FaLeaf className="text-xs text-[#18a957] transition-transform duration-300 group-hover:rotate-12" />
+                    <FaLeaf
+                      aria-hidden="true"
+                      className="text-xs text-[#18a957] transition-transform duration-300 group-hover:rotate-12"
+                    />
+
                     {service}
                   </Link>
                 </li>
@@ -146,11 +132,12 @@ function Footer() {
 
             <div className="mt-6 space-y-5">
               <a
-                href="tel: (518) 671-8733"
+                href="tel:+15186718733"
+                aria-label="Call Native Landscaping and Tree Services at 518 671 8733"
                 className="group flex items-start gap-4 text-green-100/80 transition-colors duration-300 hover:text-white"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#32c875]">
-                  <FaPhoneAlt />
+                  <FaPhoneAlt aria-hidden="true" />
                 </span>
 
                 <div>
@@ -160,15 +147,17 @@ function Footer() {
               </a>
 
               <a
-                href=""
+                href="mailto:info@nativelandscaping.com"
+                aria-label="Email Native Landscaping and Tree Services"
                 className="group flex items-start gap-4 text-green-100/80 transition-colors duration-300 hover:text-white"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#32c875]">
-                  <FaEnvelope />
+                  <FaEnvelope aria-hidden="true" />
                 </span>
 
                 <div>
                   <p className="text-sm text-green-200">Email Us</p>
+
                   <p className="mt-1 break-all font-bold">
                     
                   </p>
@@ -177,25 +166,27 @@ function Footer() {
 
               <div className="flex items-start gap-4 text-green-100/80">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#32c875]">
-                  <FaMapMarkerAlt />
+                  <FaMapMarkerAlt aria-hidden="true" />
                 </span>
 
                 <div>
                   <p className="text-sm text-green-200">Service Area</p>
+
                   <p className="mt-1 font-bold">
-                    NY United states
+                    New York, United States
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4 text-green-100/80">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#32c875]">
-                  <FaClock />
+                  <FaClock aria-hidden="true" />
                 </span>
 
                 <div>
-                  
-                  <p className="mt-1 text-sm text-green-300">
+                  <p className="text-sm text-green-200">Availability</p>
+
+                  <p className="mt-1 text-sm font-semibold text-green-300">
                     Emergency service available 24/7
                   </p>
                 </div>
@@ -216,6 +207,7 @@ function Footer() {
           <div className="flex flex-wrap justify-center gap-5">
             <Link
               to="/privacy"
+              aria-label="Read the Native Landscaping and Tree Services privacy policy"
               className="transition-colors duration-300 hover:text-white"
             >
               Privacy Policy
@@ -223,6 +215,7 @@ function Footer() {
 
             <Link
               to="/terms"
+              aria-label="Read the Native Landscaping and Tree Services terms and conditions"
               className="transition-colors duration-300 hover:text-white"
             >
               Terms &amp; Conditions

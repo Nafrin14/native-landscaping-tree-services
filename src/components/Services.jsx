@@ -111,13 +111,18 @@ function Services() {
                   {service.description}
                 </p>
 
-                <Link
-                  to="/services"
-                  className="mt-6 inline-flex items-center gap-2 font-semibold text-[#078c45] transition hover:text-[#055f31]"
-                >
-                  Learn More
-                  <FaArrowRight className="transition group-hover:translate-x-1" />
-                </Link>
+               <Link
+  to="/services"
+  aria-label={`Learn more about ${service.title}`}
+  title={`Learn more about ${service.title}`}
+  className="mt-6 inline-flex items-center gap-2 font-semibold text-[#078c45] transition hover:text-[#055f31]"
+>
+  Learn More About {service.title}
+  <FaArrowRight
+    aria-hidden="true"
+    className="transition group-hover:translate-x-1"
+  />
+</Link>
 
               </div>
             </article>
@@ -126,13 +131,15 @@ function Services() {
 
         {/* Button */}
         <div className="mt-16 text-center">
-          <Link
-            to="/services"
-            className="inline-flex items-center gap-3 rounded-full bg-[#078c45] px-10 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#056b36]"
-          >
-            View All Services
-            <FaArrowRight />
-          </Link>
+         <Link
+  to="/services"
+  aria-label="View all landscaping and tree care services"
+  title="View all landscaping and tree care services"
+  className="inline-flex items-center gap-3 rounded-full bg-[#078c45] px-10 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#056b36]"
+>
+  View All Services
+  <FaArrowRight aria-hidden="true" />
+</Link>
         </div>
 
       </div>
