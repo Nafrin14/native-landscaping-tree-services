@@ -95,7 +95,9 @@ function WhyChooseUs() {
             </div>
             <div>
               <p className="text-xl font-bold text-gray-900">Years of</p>
-              <p className="text-green-600 font-bold tracking-wide">Premium Experience</p>
+             <p className="font-bold tracking-wide text-[#034f28]">
+  Premium Experience
+</p>
             </div>
           </div>
         </div>

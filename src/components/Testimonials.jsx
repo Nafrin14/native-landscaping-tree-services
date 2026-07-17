@@ -56,11 +56,7 @@ function Testimonials() {
           </span>
 
           <h2 className="mt-6 text-4xl font-extrabold leading-tight text-[#10351f] sm:text-5xl lg:text-5xl">
-            What Our{" "}
-            <span className="text-[#034f28]">
-              Customers
-            </span>{" "}
-            Say
+            What Our <span className="text-[#034f28]">Customers</span> Say
           </h2>
 
           <div className="mx-auto mt-5 flex items-center justify-center gap-4">
@@ -81,10 +77,9 @@ function Testimonials() {
 
           {/* Average Rating */}
           <div className="mt-7">
-            <div
-              aria-label="5 out of 5 stars"
-              className="flex justify-center gap-2 text-yellow-500"
-            >
+            <div className="flex justify-center gap-2 text-yellow-500">
+              <span className="sr-only">5 out of 5 stars</span>
+
               {Array.from({ length: 5 }).map((_, index) => (
                 <FaStar
                   key={index}
@@ -113,10 +108,9 @@ function Testimonials() {
                 className="text-[#056b36] transition-transform duration-300 group-hover:scale-110"
               />
 
-              <div
-                aria-label="5 out of 5 stars"
-                className="mt-6 flex gap-1 text-yellow-500"
-              >
+              <div className="mt-6 flex gap-1 text-yellow-500">
+                <span className="sr-only">5 out of 5 stars</span>
+
                 {Array.from({ length: 5 }).map((_, index) => (
                   <FaStar
                     key={index}
